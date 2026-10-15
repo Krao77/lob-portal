@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for a Job | JobFinder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Job<span>Finder</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#jobs">Browse Jobs</a>
+      <a class="active" href="apply.html">Apply</a>
+    </nav>
+    <button id="themeToggle" class="theme-button" type="button" aria-label="Toggle dark mode">🌙 Theme</button>
+  </header>
+
+  <main class="apply-main">
+    <section class="apply-intro">
+      <p class="eyebrow">TAKE THE NEXT STEP</p>
+      <h1>Make your <span>move.</span></h1>
+      <p>Fill in the demo form below to practise applying for a job.</p>
+      <div class="notice"><strong>Project demo:</strong> This form does not send your information to an employer or a server.</div>
+    </section>
+
+    <section class="form-card">
+      <h2>Job application</h2>
+      <p class="muted">Fields marked * are required.</p>
+      <form id="applicationForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fullName">Full name *</label>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g. Aditi Sharma" required minlength="2">
+          </div>
+          <div class="form-field">
+            <label for="email">Email address *</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone number *</label>
+            <input id="phone" name="phone" type="tel" placeholder="10-digit phone number" required pattern="[0-9]{10}" title="Enter exactly 10 digits">
+          </div>
+          <div class="form-field">
+            <label for="selectedJob">Job title *</label>
+            <select id="selectedJob" name="selectedJob" required>
+              <option value="">Choose a job</option>
+              <option>Frontend Developer Intern</option>
+              <option>UI/UX Design Intern</option>
+              <option>Digital Marketing Intern</option>
+              <option>Junior Data Analyst</option>
+              <option>Business Development Associate</option>
+              <option>Python Developer</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="skills">Skills *</label>
+          <input id="skills" name="skills" type="text" placeholder="e.g. HTML, CSS, teamwork" required>
+        </div>
+        <div class="form-field">
+          <label for="coverLetter">Why are you a good fit?</label>
+          <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Write a few sentences about yourself..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Submit demo application</button>
+          <button class="button button-outline" type="reset">Clear form</button>
+        </div>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="index.html">Job<span>Finder</span></a><p>Student project demo · Sample job listings only</p></footer>
+</body>
+</html>

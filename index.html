@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobFinder | Find Your Next Job</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Job<span>Finder</span></a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="#jobs">Browse Jobs</a>
+      <a href="apply.html">Apply</a>
+    </nav>
+    <button id="themeToggle" class="theme-button" type="button" aria-label="Toggle dark mode">🌙 Theme</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT OPPORTUNITY STARTS HERE</p>
+      <h1>Find a job that fits <span>your future.</span></h1>
+      <p class="hero-text">Explore sample opportunities, discover new careers, and take the next step.</p>
+      <form id="searchForm" class="search-bar">
+        <label class="sr-only" for="jobSearch">Search jobs or companies</label>
+        <input id="jobSearch" type="search" placeholder="Job title or company..." autocomplete="off">
+        <label class="sr-only" for="categoryFilter">Job category</label>
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+          <option value="Technology">Technology</option>
+          <option value="Design">Design</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Business">Business</option>
+        </select>
+        <button class="button button-primary" type="submit">Search jobs</button>
+      </form>
+      <div class="hero-stats">
+        <div><strong id="jobCount">6</strong><span>sample jobs</span></div>
+        <div><strong>4</strong><span>career categories</span></div>
+        <div><strong>100%</strong><span>free to explore</span></div>
+      </div>
+    </section>
+
+    <section id="jobs" class="jobs-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">OPPORTUNITIES FOR YOU</p><h2>Featured jobs</h2></div>
+        <p id="resultMessage" aria-live="polite">Showing all jobs</p>
+      </div>
+      <div id="jobGrid" class="job-grid">
+        
+      </div>
+      <p id="noResults" class="no-results" hidden>No jobs match your search. Try another keyword or category.</p>
+    </section>
+
+    <section class="callout">
+      <div><p class="eyebrow">READY FOR YOUR NEXT STEP?</p><h2>Your next chapter could start today.</h2><p>Choose a sample listing and complete the application form.</p></div>
+      <a class="button button-light" href="apply.html">Start an application →</a>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="index.html">Job<span>Finder</span></a><p>Student project demo · Sample job listings only</p></footer>
+</body>
+</html>
